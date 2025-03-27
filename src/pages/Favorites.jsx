@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/favorites.css"
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 function Favorites(){
   const [favorites, setFavorites] = useState([]);
@@ -9,7 +10,7 @@ function Favorites(){
     async function getFavorites(){
       const token = localStorage.getItem("token");
       const username = localStorage.getItem("username");
-      const res = await axios.get(`http://localhost:4000/api/user/${username}/favorites`, {
+      const res = await axios.get(`${BASE_URL}/api/user/${username}/favorites`, {
         headers: { Authorization: token },
       });
       console.log("API Response:", res.data)
@@ -23,7 +24,7 @@ function Favorites(){
     const username = localStorage.getItem("username");
     try {
       // Send a request to the backend to remove the pokemon
-      const res = await axios.delete(`http://localhost:4000/api/user/${username}/favorites/${pokemonName}`, {
+      const res = await axios.delete(`${BASE_URL}/api/user/${username}/favorites/${pokemonName}`, {
         headers: { Authorization: token },
         data: { pokemon_id }, // Sending the id of the pokemon to be removed
       });

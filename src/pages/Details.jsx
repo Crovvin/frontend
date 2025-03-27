@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
 import "../styles/Details.css"
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 function Details(){
     const { name } = useParams();
@@ -16,7 +17,6 @@ function Details(){
           console.error("Error getting Pokémon information:", error);
         }
       };
-  
       getInfo();
     }, [name]);
   
@@ -26,7 +26,7 @@ function Details(){
   
       try {
         const response = await axios.post(
-          `http://localhost:4000/api/user/${username}/favorites/${name}`,
+          `${BASE_URL}/api/user/${username}/favorites/${name}`,
           { pokemonName: name },
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -63,7 +63,7 @@ function Details(){
             </ul>
         </div>
         <div className="statsSection">
-            <h3 className="">Base Stats</h3>
+            <h3>Base Stats</h3>
             <ul className="detailsTypes">
             {pokemon.stats.map((stat) => (
                 <li key={stat.stat.name} className="">

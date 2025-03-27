@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import "../styles/form.css"
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -9,7 +10,7 @@ function Login() {
   const navigate = useNavigate();
 
   async function formLogin(){
-    const res = await axios.post("http://localhost:4000/api/user/login", { username, password });
+    const res = await axios.post(`${BASE_URL}/api/user/login`, { username, password });
     if (res.data.token) {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("username", username);
