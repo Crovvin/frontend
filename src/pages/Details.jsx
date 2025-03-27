@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
-import "../styles/Details.css"
+import "../styles/details.css"
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 function Details(){
