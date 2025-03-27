@@ -16,6 +16,6 @@ This is an application that allows users to browse and learn about all of the Po
 
 ## Upcoming features
 1. Clearer UI
-2. 
+2. Add shiny varients toggle button in the user's favorites page
 
 
