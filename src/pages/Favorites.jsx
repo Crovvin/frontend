@@ -25,7 +25,7 @@ function Favorites(){
       // Send a request to the backend to remove the pokemon
       const res = await axios.delete(`http://localhost:4000/api/user/${username}/favorites/${pokemonName}`, {
         headers: { Authorization: token },
-        data: { pokemon_id }, // Sending the name of the pokemon to be removed
+        data: { pokemon_id }, // Sending the id of the pokemon to be removed
       });
       // Update the favorites list in the frontend
       setFavorites(favorites.filter((pokemon) => pokemon.name !== pokemonName));
@@ -45,7 +45,7 @@ function Favorites(){
           {favorites.map((pokemon, index) => (
             <li key={pokemon._id}>
                 <img src={pokemon.image} alt={pokemon.name} />
-                {pokemon.name} - {pokemon.type.join(", ")}
+                {pokemon.name} - {pokemon.type.join("/")}
                 <button onClick={() => removeFromFavorites(pokemon.name, pokemon._id)}>Remove from Favorites</button>
             </li>
           ))}
