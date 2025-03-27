@@ -1,0 +1,86 @@
+.detailsContainer {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #92d7d8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.detailsContainer h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #333;
+    margin-bottom: 1px;
+}
+
+.detailsContainer img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1px;
+}
+
+.detailsSection {
+    margin-bottom: 20px;
+}
+
+.detailsSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.detailsSection li {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    background: #dfcdef;
+    padding: 8px;
+    margin: 5px 0;
+    margin-right: 30px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+}
+
+.detailsTypes {
+    list-style: none;
+    padding: 0;
+}
+
+.detailsTypes li {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    background: #dfcdef;
+    padding: 8px;
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.statsSection {
+    background: #c070b3;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.favoriteButton {
+    background-color: #c070b3;
+    color: #c8d9a7;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.favoriteButton:hover {
+    background-color: #a103b6;
+}

@@ -1,0 +1,71 @@
+.favoritesContainer {
+    background-color: #92d7d8;
+    padding: 40px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.favoritesContainer h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.favoritesContainer p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Style for the favorites list */
+.favorites {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.favorites li {
+    background-color: #c8d9a7;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.favorites li:hover {
+    transform: translateY(-5px);
+}
+
+.favorites img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.favorites button {
+    background-color: #c070b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.favorites button:hover {
+    background-color: #a103b6;
+}
+
+.empty {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #92d7d8;
+}

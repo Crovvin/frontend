@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "../styles/favorites.css"
 
 function Favorites(){
   const [favorites, setFavorites] = useState([]);
@@ -35,12 +36,12 @@ function Favorites(){
   }
 
   return (
-    <div>
+    <div className="favoritesContainer">
       <h2>My Favorite Pokémon</h2>
       {favorites.length === 0 ? (
-        <p>No favorites found</p>
+        <p className="empty">No favorites found</p>
       ) : (
-        <ul>
+        <ul className= "favorites">
           {favorites.map((pokemon, index) => (
             <li key={pokemon._id}>
                 <img src={pokemon.image} alt={pokemon.name} />

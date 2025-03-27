@@ -1,12 +1,17 @@
-# React + Vite
+# PokeDex Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an application that allows users to browse and learn about all of the Pokemon in the universe!
 
-Currently, two official plugins are available:
+## Features
+1. Login and Registration functionality
+2. Ability to browse every single pokemon and recieve information from the PokeAPI about the selected pokemon
+3. Users can tie their favorite pokemon to their accounts 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
+1. React
+2. React Router DOM
+3. Axios
+4. Vite
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+

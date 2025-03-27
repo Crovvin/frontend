@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import axios from "axios"
+import "../styles/pokemon.css"
 
 function Pokemon(){
   const [pokemon, setPokemon] = useState([]);
@@ -22,27 +23,28 @@ function Pokemon(){
         p.name.toLowerCase().includes(search.toLowerCase()));
 
   return (
-    <div className="grid grid-cols-4 gap-4">
-      <h2 className="text-2xl font-bold mb-4">Pokémon List</h2>
+    <div className="pokemonContainer">
+      <h2 className="pokemonTitle">Pokémon List</h2>
 
       <input
         type="text"
         placeholder="Search Pokémon..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="border p-2 rounded-lg mb-4 w-full"
+        className="pokemonSearchBar"
         />
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="pokemonMap">
         {filteredPokemon.map((p) => {
             const pokemonId = p.url.split("/").filter(Boolean).pop();
             return(
-                <div key={pokemonId} className="p-4 border rounded-lg">
+                <div key={pokemonId} className="pokemonCard">
                     <Link to={`/pokemon/${p.name}`}>
-                        <h3 className="text-lg font-bold capitalize">{p.name}</h3>
+                        <h3 className="pokemonName">{p.name}</h3>
                         <img
                         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`}
                         alt={p.name}
+                        className="pokemonSprite"
                         />
                     </Link>
                 </div>
